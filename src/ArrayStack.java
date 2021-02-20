@@ -1,11 +1,11 @@
-public class ConvertingStack {
+public class ArrayStack<S> {
 
-    private Number[] convertArr;
+    private final Number[] convertArr;
     private int mHead;
    // private int size;
 
 
-    public ConvertingStack(int size) {
+    public ArrayStack(int size) {
         convertArr = new Number[size];
        // size = (convertArr.length - 1);
         mHead = 0;
@@ -19,19 +19,19 @@ public class ConvertingStack {
         }
     }
 
-    public void push(Number element) {
+    /* public void push(Number element) {
         if (mHead == convertArr.length - 1)
             throw new IndexOutOfBoundsException();
 
         mHead++;
         convertArr[mHead] = element;
     }
-
+*/
     public Number pop() {
         if (isEmpty())
             throw new IndexOutOfBoundsException();
 
-        Number element = (Number) convertArr[mHead];
+        Number element = convertArr[mHead];
         mHead--;
         return element;
     }
@@ -40,11 +40,13 @@ public class ConvertingStack {
         if (isEmpty()) {
             throw new IndexOutOfBoundsException();
         }
-        if (isEmpty() == false) {
-            return (Number) convertArr[mHead];
+        if (!isEmpty()) {
+            return convertArr[mHead];
         }
 
         return null;
     }
 
+    public void push(S nextToken) {
+    }
 }

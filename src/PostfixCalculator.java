@@ -1,4 +1,5 @@
-
+import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class PostfixCalculator
 {
@@ -9,11 +10,18 @@ public class PostfixCalculator
     public static String infix2postfix(String infix)
     {
         // Algorithm to convert infix string to postfix string
-        //
+            //  Scanner s = new Scanner(System.in);
+             //String expression = s.nextLine();
         // create an empty string for postfix expression
+        String problem = "";
         // create a stack of strings
+        ArrayStack<String> stack = new ArrayStack<>(10);
         // tokenize the infix expression with a delimiter of space
-        //
+        StringTokenizer expression = new StringTokenizer(infix);
+        while (expression.hasMoreTokens()) {
+            System.out.println(expression.nextToken());
+        }
+
         // while tokenizer has more tokens
         //   token = get next token from tokenizer
         //
