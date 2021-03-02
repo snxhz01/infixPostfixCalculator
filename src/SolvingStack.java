@@ -1,14 +1,18 @@
-public class SolvingStack {
+public class SolvingStack<Double> {
     private Number[] solveArr;
     private int mHead;
     // private int size;
 
+    public SolvingStack() {
 
+    }
     public SolvingStack(int size) {
         solveArr = new Number[size];
         // size = (convertArr.length - 1);
         mHead = 0;
     }
+
+
 
     public boolean isEmpty() {
         if (solveArr[mHead] == null) {
