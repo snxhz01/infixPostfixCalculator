@@ -13,8 +13,8 @@
 
 public class Main
 {
-    private static final String DefInput = "2 2 5 4 * * +";
-
+    private static final String DefInput = "((2 * 2) * 5) + 4";
+//  2 2 5 4 * * +
     public static void main(String[] args)
     {
         String infix = DefInput;
